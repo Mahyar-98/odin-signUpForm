@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Norse Bold';
+    src: url(https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf);
+}
+
 body {
     display: flex;
     flex-direction: row;
@@ -11,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: stretch;
+    align-items: center;
     gap: 370px;
     flex: 1;
     background-size: 100% 100%;
@@ -24,8 +29,8 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    align-self: stretch;
     background-color: rgb(0, 0, 0, 0.5);
-    back
 }
 
 .left-top img {
@@ -33,8 +38,9 @@ body {
 }
 
 .left-top p {
-    font-size: 30pt;
+    font-size: 40pt;
     color: white;
+    font-family: 'Norse Bold';
 }
 
 .left-bottom p {
@@ -45,6 +51,7 @@ body {
 .right {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     flex: 2;
     gap: 50px;
     height: 100%;
@@ -52,20 +59,77 @@ body {
 
 .right-top {
     background-color: rgb(245, 245, 245);
-    padding: 120px 150px 50px 30px;
+    padding: 100px 150px 50px 30px;
 }
 
 .right-top p {
     font-size: 14pt;
     font-weight: bold;
 }
+
 .right-middle {
-    padding: 0 150px 0 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 30px 30px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding: 10px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
 }
 
 .right-bottom {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: rgb(245, 245, 245);
-    padding: 0 150px 0 30px;
+    padding: 20px 150px 20px 30px;
+}
+
+.right-bottom div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+button {
+    padding: 10px 35px;
+    background-color: #596d48;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: transparent;
+    box-shadow: 2px 2px 5px rgb(110, 110, 110, 0.5);
+}
+
+.right-bottom div a {
+    color: #596d48;
+    text-decoration: none;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid #e5e7eb;
+    padding: 5px;
+}
+
+input:focus {
+    border: 2px solid lightblue;
+    box-shadow: 2px 2px 5px rgb(110, 110, 110, 0.5);
+    outline: none;
+}
+
+input:invalid {
+    border: 2px solid red;
+    outline: none;
 }
